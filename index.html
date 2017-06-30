@@ -1,0 +1,310 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gauntlet</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/gauntlet.css">
+</head>
+
+<body>
+
+  <article id="game-container">
+
+  <audio id="harryPotterTheme" autoplay src="https://upload.wikimedia.org/wikipedia/en/5/53/Harry_Potter_Soundtrack_-_Hedwig%27s_Theme.ogg"></audio>
+
+    <section id="player-setup" class="card card--name">
+      <div class="card__prompt">
+        <div><h1>Welcome to the Wizarding World</h1></div>
+        <div class="field">
+          <input type="text" autofocus="true" id="player-name" class="field__textinput" placeholder="Type your name">
+        </div>
+      </div>
+
+      <div class="card__button">
+        <a class="card__link btn btn--big btn--yellow"
+           href="#"
+           next="card--class">
+          <span class="btn__prompt">></span>
+          <span class="btn__text">Enter Hogwarts</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="class-select" class="card card--class">
+      <div class="card__prompt">
+        <div><h1>CHOOSE YOUR HOUSE</h1></div>
+        <div>
+          <a class="card__back btn btn--small"
+             href="#"
+             previous="card--name">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="userSortingHat">
+        <div class="row">
+
+            <div class="col-sm-6">
+              <div class="card__button">
+                <a class="class__link btn btn--big btn--white animated fadeIn bounce" href="#">
+                <img class="crest" src="../img/gryffindorcrest.png">
+                  <span class="btn__text">Gryffindor</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="card__button">
+                <a class="class__link btn btn--big btn--white animated fadeIn bounce" href="#">
+                <img class="crest" src="../img/hufflepuffcrest.png">
+                  <span class="btn__text">Hufflepuff</span>
+                </a>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card__button">
+                <a class="class__link btn btn--big btn--white animated fadeIn bounce" href="#">
+                <img class="crest" src="../img/ravenclawcrest.png">
+                  <span class="btn__text">Ravenclaw</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card__button">
+                <a class="class__link btn btn--big btn--white animated fadeIn bounce" href="#">
+                <img class="crest" src="../img/slytherincrest.png">
+                  <span class="btn__text">Slytherin</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="card__button">
+                <a class="class__link btn btn--big btn--white animated fadeIn bounce" href="#">
+                  <img class="crest" src="../img/sortinghat.jpg">
+                  <span class="btn__text" id="sortingHat">Sorting Hat</span>
+                </a>
+              </div>
+          </div>
+
+      </div>
+
+      <div class="card__button">
+        <a class="card__link btn btn--big btn--yellow"
+           href="#"
+           next="card--weapon">
+          <span class="btn__prompt">></span>
+          <span class="btn__text">Select patronus</span>
+        </a>
+      </div>
+    </section>
+<!-- Patronus View -->
+    <section id="weapon-select" class="card card--weapon">
+      <div class="card__prompt">
+        <div><h1>Choose your patronus</h1></div>
+        <div>
+          <a class="card__back btn btn--small"
+             href="#"
+             previous="card--class">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="userPatronus">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--black animated fadeIn bounce" href="#">
+                <img class="patronus" src="../img/stagpatronus.png">
+                <span class="btn__text">Stag</span>
+              </a>
+            </div>
+           </div>
+
+
+          <div class="col-sm-6">
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--black animated fadeIn bounce" href="#">
+              <img class="patronus" src="../img/otterpatronus.png">
+                <span class="btn__text">Otter</span>
+              </a>
+            </div>
+           </div>
+        </div>
+        <div class="row">   
+          <div class="col-sm-6">
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--black animated fadeIn bounce" href="#">
+                <img class="patronus" src="../img/hedgehogpatronus.png">
+                <span class="btn__text">Hedgehog</span>
+              </a>
+            </div>
+           </div>
+
+
+        <div class="col-sm-6">
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--black animated fadeIn bounce" href="#">
+                <img class="patronus" src="../img/dolphinpatronus.png">
+                <span class="btn__text">Dolphin</span>
+              </a>
+            </div>
+           </div>
+          </div>
+        </div>
+
+
+      <div class="card__button">
+        <a class="card__link btn btn--big btn--yellow"
+           href="#"
+           next="card--battleground">
+          
+          <span class="btn__text" id="defeatEnemies">fight the death eaters</span>
+        </a>
+      </div>
+    </section>
+<!-- Battleground View -->
+    <section id="battleground" class="card card--battleground">
+
+      <div class="card__prompt">
+        <div><h1>Battle of Hogwarts</h1></div>
+        <div>
+          <a class="card__back btn btn--small"
+             href="#"
+             previous="card--weapon">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="container-fluid" id="userBattleground">
+      
+        <div class="row">
+          <div id="stats">
+            <div class="col-sm-4">
+              <!-- <img src="../img/hagrid.png"> -->
+              <div id="img_player">
+              </div>
+              <progress class="progress" id="student_health" value="100" max="100"></progress>
+              <div id="studentStats">
+
+              </div>
+            </div>
+            <div class="col-sm-4">
+            <div>
+              <img id="battleImage">
+            </div>
+              <div id="battleStats">
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div id="img_enemy">
+              </div>
+              <progress class="progress" id="deatheater_health" value="100" max="100"></progress>
+              <div id="deathEaterStats">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+     <!--  Modal Win -->
+      <div class="modal fade" id="userWin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">You Won!!!</h4>
+            </div>
+            <div class="modal-body" id="winMessage">
+            <div><img src="../img/happydumbledore.gif"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="document.location.reload(true);">Play Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--  Modal Lose -->
+      <div class="modal fade" id="userLose" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">You Lose :( !!!</h4>
+            </div>
+            <div class="modal-body" id="loseMessage">
+            <div><img src="../img/cryingharrypotter.gif"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="document.location.reload(true);">Play Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="attackButtons">
+        <div class="col-sm-4">
+            <div class="card__button">
+              <a class="card__link btn btn--big btn--yellow"
+                 href="#"
+                 next="card--battleground">
+                <span class="btn__prompt">></span>
+                <span class="btn__text" id="AttackEnemy">Cast Patronus</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+             <div class="card__button">
+              <a class="card__link btn btn--big btn--yellow"
+                 href="#"
+                 next="card--battleground">
+                <span class="btn__prompt">></span>
+                <span class="btn__text" id="castSpell">Cast A Spell</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+             <div class="card__button">
+              <a class="card__link btn btn--big btn--yellow"
+                 href="#"
+                 next="card--battleground">
+                <span class="btn__prompt">></span>
+                <span class="btn__text" id="getFriend">Help from a Friend</span>
+              </a>
+            </div>
+          </div>
+       </div>
+    </section>
+
+  </article>
+
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="javascripts/spotify-web-api.js"></script>
+  <script src='lib/dist/bundle.js'></script>
+
+</body>
+</html>
