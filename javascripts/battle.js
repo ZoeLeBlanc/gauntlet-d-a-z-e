@@ -11,13 +11,17 @@ Battle.startAttack = function(studentObj, deathEaterObj){
 };
 Battle.generateImage = function(){
 	var Gifs = [];
-	Gifs[0]="../gif/gif1.gif";
-	Gifs[1]="../gif/gif2.gif";
-	Gifs[2]="../gif/gif3.gif";
-	Gifs[3]="../gif/gif4.gif";
-	Gifs[4]="../gif/gif5.gif";
-	Gifs[5]="../gif/gif6.gif";
-	Gifs[6]="../gif/gif7.gif";
+	Gifs[0]="./gif/gif1.gif";
+	Gifs[1]="./gif/gif2.gif";
+	Gifs[2]="./gif/gif3.gif";
+	Gifs[3]="./gif/gif4.gif";
+	Gifs[4]="./gif/gif5.gif";
+	Gifs[5]="./gif/gif6.gif";
+	Gifs[6]="./gif/gif7.gif";
+    Gifs[7]="./gif/gif8.gif";
+    Gifs[8]="./gif/gif9.gif";
+    Gifs[9]="./gif/gif10.gif";
+    Gifs[10]="./gif/gif11.gif";
 	var random = Math.round(Math.random() * Gifs.length - 1);
 	var printGif = Gifs[random];
 	$("#battleImage").attr("src", printGif);

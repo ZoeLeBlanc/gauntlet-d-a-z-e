@@ -45,6 +45,18 @@ Patroni.Dolphin = function() {
 };
 Patroni.Dolphin.prototype = new Patroni.Patronus();
 
+Patroni.Phoenix = function() {
+  this.animal = "Phoenix";
+  this.damage = Math.floor(Math.random() * 10 + 10);
+};
+Patroni.Phoenix.prototype = new Patroni.Patronus();
+
+Patroni.Fox = function() {
+  this.animal = "Fox";
+  this.damage = Math.floor(Math.random() * 10 + 10);
+};
+Patroni.Fox.prototype = new Patroni.Patronus();
+
 module.exports = {
   Patroni: Patroni
 };

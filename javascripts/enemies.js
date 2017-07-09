@@ -5,10 +5,10 @@ const player = require("./player");
 var Voldemort = function() {
   this.health = this.health + 20;
   this.species = "Voldemort";
-  this.allowedNames = ["Zoe Ames", "Nathan Gonzalez", "William Hickok"];
+  this.allowedNames = ["Voldemort", "Bellatrix Lestrange", "Barty Crouch Jr."];
   this.allowedSpells = ["Imperio", "Crucio"];
   this.house = "Slytherin";
-  this.image = "<img src='../img/voldemort.jpg' width=300px height=250px>";
+  this.image = "<img src='./img/deatheaters.gif' width=300px height=250px>";
   this.generateNames = function(){
     var random = Math.round(Math.random() * (this.allowedNames.length - 1));
 

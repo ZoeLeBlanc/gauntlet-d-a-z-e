@@ -77,6 +77,7 @@ $("#userSortingHat").click(function(e){
   });
 
 $("#userPatronus").click(function(e){
+  console.log(e.target);
   var test = $(e.target).is(".btn__text");
   if (test){
       let clicked = $(e.target).find(".btn__text").context.innerHTML;
